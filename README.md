@@ -1,6 +1,6 @@
 # LLM Gateway API
 
-A production-grade API gateway for LLM providers (OpenAI, Anthropic) with retry logic, cost control, rate limiting, caching, and comprehensive logging. Built with FastAPI and Redis for high-performance, scalable LLM API management.
+API gateway for LLM providers (OpenAI, Anthropic) with retry logic, cost control, rate limiting, caching, and logging. Built with FastAPI and Redis.
 
 ---
 
