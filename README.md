@@ -60,7 +60,7 @@ graph TD
 
 ## System Overview
 
-LLM Gateway API implements a robust, production-ready architecture with comprehensive error handling, cost control, and observability across five main layers:
+Implements a robust, production-ready architecture with comprehensive error handling, cost control, and observability across five main layers:
 
 ### **Client Layer**
 
@@ -164,44 +164,3 @@ sequenceDiagram
     G->>L: Log final metrics
     L->>L: Structured JSON logging
 ```
-
----
-
-## Features
-
-### **Core Functionality**
-
-- **Multi-Provider Support**: Unified interface for OpenAI (GPT-4, GPT-3.5) and Anthropic (Claude) APIs
-- **Intelligent Retry Logic**: Exponential backoff with jitter for transient failures
-- **Advanced Rate Limiting**: Per-user rate limiting with sliding window implementation
-- **Cost Control**: Real-time token usage tracking and cost monitoring
-- **Response Caching**: Redis-based caching to reduce API calls and improve performance
-
-### **Production Features**
-
-- **Structured Logging**: JSON-formatted logs with comprehensive request/response tracking
-- **Health Monitoring**: Comprehensive health checks with Redis connectivity testing
-- **Admin Dashboard**: Usage statistics, cost monitoring, and system metrics
-- **Error Handling**: Graceful error handling with proper HTTP status codes
-- **Security**: Input validation, rate limiting, and secure error responses
-
-### **Scalability & Performance**
-
-- **Horizontal Scaling**: Stateless design allows multiple instances behind load balancer
-- **Redis Integration**: Distributed caching and rate limiting
-- **Async Processing**: Non-blocking request handling with FastAPI
-- **Performance Metrics**: Response time tracking and cache hit rate monitoring
-
-### **Developer Experience**
-
-- **Interactive Documentation**: Auto-generated API docs with OpenAPI/Swagger
-- **Type Safety**: Full Pydantic validation for all requests and responses
-- **Comprehensive Testing**: Unit and integration tests with mocking
-- **Docker Support**: Production-ready containerization with health checks
-
-### **Monitoring & Observability**
-
-- **Request Tracking**: Unique request IDs for end-to-end tracing
-- **Cost Analytics**: Per-user and per-model cost breakdown
-- **Performance Metrics**: Latency tracking and cache statistics
-- **Error Monitoring**: Detailed error logging with context
